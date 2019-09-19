@@ -6,4 +6,4 @@ FROM alpine:3.10
 COPY --from=builder /go/bin/sql-migrate /bin/sql-migrate
 RUN mkdir /migrations
 WORKDIR /migrations
-CMD ["sql-migrate"]
+ENTRYPOINT ["sql-migrate"]
